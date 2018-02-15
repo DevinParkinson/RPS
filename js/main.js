@@ -1,41 +1,32 @@
-var user;
-var computer;
-var winner;
+$(document).ready(function(){
 
-function startGame(e) {
-  user = e.target.id
-  computerChoice();
-  checkWin();
-  displayResults();
-}
+  var user;
+  var computer;
+  var winner;
+  var options = ['rock', 'paper', 'scissors']
 
-function computerChoice() {
-  var choices = ['rock', 'paper', 'scissors']
-  var index = Math.floor(Math.random() * 3)
-  console.log(choices[index])
-}
+  $('.choice').on('click', function(){
+    user = this.id;
+    $('#userChoice').text('You chose: ' + user)
+    getComputerChoice()
+  })
 
-function checkWin() { 
-  console.log('checking for win')
-}
+ function getComputerChoice(){
+   computerChoice = options[Math.floor(Math.random() * options.length)]
+   $('#computerChoice').text('Computer chose: ' + computerChoice)
+   getResult()
+ }
 
-function displayResults() {
-  console.log('displaying results')
-}
-
-var choices = document.getElementsByClassName('choice')
-
-for (var i in choices) {
-  try {
-    choices[i].addEventListener('click', startGame)
-  } catch(err) {
-    //First load
+  function getResult() {
+    if (user === computerChoice){
+      result = 'Tie'
+    } else if (user === 'rock' && computerChoice === 'scissors' ||
+               user === 'paper' && computerChoice === 'rock' ||
+               user === 'scissors' && computerChoice === 'paper'
+              ){
+                result = 'You win!'
+    } else {
+      result = 'You lose';
+    }
   }
-}
-
-var start = document.getElementById('start')
-start.addEventListener('click', function() {
-  start.className = "hide"
-  var game = document.getElementById('game')
-  game.className = 'container'
-});
+})

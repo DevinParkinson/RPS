@@ -4,19 +4,43 @@
     <meta charset="utf-8">
   </head>
 
-  <body style= "background-color: black; color: white">
+  <body class= "#0d47a1 blue darken-4">
+    <div class="#448aff blue accent-2">
     <h1>Let's play Rock, Paper, Scissors!</h1>
       <p>To start, simply click on the image you want to play</p>
-        <button id="rock" class="choice"><a href= "default">
-          <img src= "https://studio.code.org/media?u=http%3A%2F%2F3.bp.blogspot.com%2F-KHc70esXncY%2FT76RN0I7mKI%2FAAAAAAAAOwg%2F8xUnLhIcHGU%2Fs1600%2Fkey%252Bholder.jpg"
-          style = "width: 300px; height:270px;"</a></button>
-        <button id="paper" class="choice"><a href= "default">
-          <img src= "https://app.secure.griffith.edu.au/griffithpay/images/P/darkroom%20paper_icon-03.jpg"
-          style= "width: 300px; height: 270px"</a></button>
-        <button id="scissors" class="choice"><a href= "default">
-          <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Pair_of_scissors_with_black_handle%2C_2015-06-07.jpg/1200px-Pair_of_scissors_with_black_handle%2C_2015-06-07.jpg"
-          style= "width:300px; height: 270px"</a></button>
-    <script src="./js/main.js"></script>
-        <p style= "color:white">Computer chose:</p>
+    </div>
+        <button id="rock" class="choice">
+          <img
+          src= "./images/ygKk7_s-200x150.gif"
+          style = "width: 300px; height:270px;" />
+        </button>
+        <button id="paper" class="choice">
+          <img
+          src= "./images/giphy.gif"
+          style= "width: 300px; height: 270px" />
+        </button>
+        <button id="scissors" class="choice">
+          <img
+            src= "./images/GlassKindHapuka-size_restricted.gif"
+            style= "width:300px; height: 270px"
+          />
+        </button>
+          <br />
+          <div class="#448aff blue accent-2">
+            <p color='white' id="userChoice">Your choice:</p>
+          </div>
+
+          <div class="#0d47a1 blue darken-4">
+            <p color='white' id="computerChoice">Computer chose:</p>
+          </div>
+
+
+        <script   src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script src="./js/main.js"></script>
+
   </body>
 </html>

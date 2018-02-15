@@ -1,7 +1,6 @@
 <html lang="en">
   <head>
     <title>RPS</title>
-    <meta charset="utf-8">
   </head>
 
   <body class= "#0d47a1 blue darken-4">
@@ -12,18 +11,20 @@
         <button id="rock" class="choice">
           <img
           src= "./images/ygKk7_s-200x150.gif"
-          style = "width: 300px; height:270px;" />
+          style = "width: 300px; height:270px"
+          class= "rounded float-left; img-thumbnail" />
         </button>
         <button id="paper" class="choice">
           <img
           src= "./images/giphy.gif"
-          style= "width: 300px; height: 270px" />
+          style= "width: 300px; height: 270px"
+          class= "rounded text-center; img-fluid" />
         </button>
         <button id="scissors" class="choice">
           <img
             src= "./images/GlassKindHapuka-size_restricted.gif"
             style= "width:300px; height: 270px"
-          />
+            class= "rounded float-right; img-thumbnail; img-fluid" />
         </button>
           <br />
           <div class="#448aff blue accent-2">
@@ -34,11 +35,18 @@
             <p color='white' id="computerChoice">Computer chose:</p>
           </div>
 
+          <div class="#0d47a1 blue darken-4">
+            <p color='white' id="result"></p>
+          </div>
+
 
         <script   src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
         </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <script src="./js/main.js"></script>
 

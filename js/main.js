@@ -28,5 +28,15 @@ $(document).ready(function(){
     } else {
       result = 'You lose';
     }
+    printResults()
+  }
+  function printResults(){
+    if (result === 'Tie'){
+      $('#result').text('You tied. Better luck next time')
+    } else if (result === 'You win!'){
+      $('#result').text('Congratulations. You win!')
+    } else {
+      $('#result').text('You lose. Better luck next time')
+    }
   }
 })
